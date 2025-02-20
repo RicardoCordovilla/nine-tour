@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [deptId, setDeptId] = useState("");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleStartTour = () => {
@@ -16,21 +17,33 @@ const Home = () => {
     // Agrega más departamentos según sea necesario
   ];
 
+  const handleSelect = (id: string) => {
+    setDeptId(id);
+    setDropdownOpen(false);
+  };
+
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center">
       <h1>Bienvenido</h1>
-      <select
-        className="select select-bordered w-full max-w-xs"
-        value={deptId}
-        onChange={(e) => setDeptId(e.target.value)}
-      >
-        <option value="" disabled>Seleccione un departamento</option>
-        {departments.map((dept) => (
-          <option key={dept.id} value={dept.id}>
-            {dept.name}
-          </option>
-        ))}
-      </select>
+      <div className="dropdown">
+        <div
+          tabIndex={0}
+          role="button"
+          className="btn m-1"
+          onClick={() => setDropdownOpen(!dropdownOpen)}
+        >
+          {deptId ? departments.find(dept => dept.id === deptId)?.name : "Seleccione un departamento"}
+        </div>
+        {dropdownOpen && (
+          <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-[1] w-52 p-2 shadow">
+            {departments.map((dept) => (
+              <li key={dept.id} className="text-black">
+                <a onClick={() => handleSelect(dept.id)}>{dept.name}</a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
       <button className="btn btn-active btn-neutral mt-4" onClick={handleStartTour}>
         Iniciar recorrido
       </button>
