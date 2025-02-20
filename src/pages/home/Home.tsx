@@ -11,7 +11,7 @@ const Home = () => {
   };
 
   const departments = [
-    { id: "101", name: "Departamento 1" },
+    { id: "1204", name: "Departamento 1204" },
     // { id: "202", name: "Departamento 2" },
     // { id: "303", name: "Departamento 3" },
     // Agrega más departamentos según sea necesario

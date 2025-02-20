@@ -1,7 +1,7 @@
 // src/routes/tour-routes.ts
 
 const tourRoutes: Record<string, string[]> = {
-    "101": [
+    "1204": [
         "/images/entrada.webp",
         "/images/paso1.webp",
         "/images/paso2.webp",
