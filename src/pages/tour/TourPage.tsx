@@ -48,7 +48,7 @@ const TourPage = () => {
 
     return (
         <div className="w-full h-screen flex flex-col items-center justify-center relative">
-            <h1 className="text-2xl font-bold text-center mt-4">Departamento {id}</h1>
+            {/* <h1 className="text-2xl font-bold text-center mt-4">Departamento {id}</h1> */}
 
             <div className="w-full flex flex-col items-center justify-center relative">
                 {isLoading ? (

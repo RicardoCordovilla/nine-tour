@@ -1,1 +1,1 @@
-export * from './tour-toutes';
+export * from './tour-routes';
