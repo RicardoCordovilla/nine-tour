@@ -2,12 +2,20 @@
 
 const tourRoutes: Record<string, string[]> = {
     "101": [
-        "/images/entrada.jpg",
-        "/images/paso1.jpg",
-        "/images/paso2.jpg",
-        "/images/paso3.jpg",
-        "/images/paso4.jpg",
-        "/images/paso5.jpg"
+        "/images/entrada.webp",
+        "/images/paso1.webp",
+        "/images/paso2.webp",
+        "/images/paso3.webp",
+        "/images/paso4.webp",
+        "/images/paso5.webp",
+        "/images/paso6.webp",
+        "/images/paso7.webp",
+        "/images/paso8.webp",
+        "/images/paso9.webp",
+        "/images/paso10.webp",
+        "/images/paso11.webp",
+        "/images/paso12.webp",
+        "/images/paso13.webp",
 
     ],
     // "202": ["/images/entrada.jpeg", "/images/paso3.jpeg", "/images/paso4.jpeg"],
